@@ -45,7 +45,7 @@ jobs:
         run: |
           export PATH=$PATH:$PWD/sdk/bin
           cd kernel
-          make kernel
+          make TI73
           make kernel-headers
           mv kernel-headers-* ../build
       
