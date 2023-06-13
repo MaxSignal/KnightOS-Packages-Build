@@ -1,0 +1,75 @@
+[submodule "kpm"]
+	path = kpm
+	url = https://github.com/KnightOS/kpm.git
+[submodule "demos"]
+	path = demos
+	url = https://github.com/KnightOS/demos.git
+[submodule "configlib"]
+	path = configlib
+	url = https://github.com/KnightOS/configlib.git
+[submodule "kpy"]
+	path = kpy
+	url = https://github.com/KnightOS/kpy.git
+[submodule "calcsys"]
+	path = calcsys
+	url = https://github.com/KnightOS/calcsys.git
+[submodule "phoenix"]
+	path = phoenix
+	url = https://github.com/KnightOS/phoenix.git
+[submodule "periodic"]
+	path = periodic
+	url = https://github.com/KnightOS/periodic.git
+[submodule "settings"]
+	path = settings
+	url = https://github.com/KnightOS/settings.git
+[submodule "fileman"]
+	path = fileman
+	url = https://github.com/KnightOS/fileman.git
+[submodule "calculator"]
+	path = calculator
+	url = https://github.com/KnightOS/calculator.git
+[submodule "bed"]
+	path = bed
+	url = https://github.com/KnightOS/bed.git
+[submodule "calendar"]
+	path = calendar
+	url = https://github.com/KnightOS/calendar.git
+[submodule "corelib"]
+	path = corelib
+	url = https://github.com/KnightOS/corelib.git
+[submodule "init"]
+	path = init
+	url = https://github.com/KnightOS/init.git
+[submodule "threadlist"]
+	path = threadlist
+	url = https://github.com/KnightOS/threadlist.git
+[submodule "textview"]
+	path = textview
+	url = https://github.com/KnightOS/textview.git
+[submodule "castle"]
+	path = castle
+	url = https://github.com/KnightOS/castle.git
+[submodule "kernel"]
+	path = kernel
+	url = https://github.com/KnightOS/kernel.git
+[submodule "ztetris"]
+	path = ztetris
+	url = https://github.com/unlimitedbacon/ztetris.git
+[submodule "rubik"]
+	path = rubik
+	url = https://github.com/Ivoah/rubik.git
+[submodule "fx3dlib"]
+	path = fx3dlib
+	url = https://github.com/matrefeytontias/fx3dlib.git
+[submodule "KOS-TunnelGame"]
+	path = KOS-TunnelGame
+	url = https://github.com/Axenntio/KOS-TunnelGame.git
+[submodule "progcalc"]
+	path = progcalc
+	url = https://github.com/boos1993/progcalc.git
+[submodule "KIMP"]
+	path = KIMP
+	url = https://github.com/MaxLeiter/KIMP.git
+[submodule "pong"]
+	path = pong
+	url = https://github.com/MaxLeiter/pong.git
