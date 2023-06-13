@@ -34,6 +34,7 @@ jobs:
           wget https://github.com/MaxSignal/KnightOS-SDK-Build/releases/download/alpha2/KnightOS-SDK.zip
           
           unzip KnightOS-SDK.zip -d sdk
+          chmod +x sdk/bin/*
   
       
       - name: Init submodules and make build folder
