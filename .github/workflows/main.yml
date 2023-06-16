@@ -97,6 +97,7 @@ jobs:
           
           cd init
           
+          knightos init
           make
           make package
           mv *.pkg ../build/core
