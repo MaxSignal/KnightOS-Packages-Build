@@ -45,9 +45,9 @@ jobs:
           
       - name: kernel-header
         run: |
-          export PATH=$PATH:$PWD/KnightosSDK/bin
-          export PYTHONPATH=$PWD/KnightosSDK/lib/python3.10/site-packages:$PYTHONPATH
           export SDK=$PWD/KnightosSDK
+          export PATH=$PATH:$SDK/bin
+          export PYTHONPATH=$SDK/lib/python3.10/site-packages:$PYTHONPATH
           
           mkdir -p build/core/kernel-headers/ti73
           mkdir -p build/core/kernel-headers/ti83p
@@ -89,8 +89,13 @@ jobs:
           
       - name: configlib
         run: |
+          export SDK=$PWD/KnightosSDK
+          export PATH=$PATH:$SDK/bin
+          export PYTHONPATH=$SDK/lib/python3.10/site-packages:$PYTHONPATH
+          
           cd configlib
           knightos init
+          
           make
           make package
           mv *.pkg ../build/core
