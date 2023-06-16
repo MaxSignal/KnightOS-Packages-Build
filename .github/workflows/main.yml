@@ -31,7 +31,7 @@ jobs:
           
           sudo apt install make gcc python3 unzip wget
           
-          wget https://github.com/MaxSignal/KnightOS-SDK-Build/releases/download/alpha2/KnightOS-SDK.zip
+          wget https://github.com/MaxSignal/KnightOS-SDK-Build/releases/download/alpha3/KnightOS-SDK.zip
           
           unzip KnightOS-SDK.zip -d KnightosSDK
           chmod +x KnightosSDK/bin/*
@@ -43,7 +43,9 @@ jobs:
           
       - name: kernel-header
         run: |
-          export PATH=$PATH:$PWD/sdk/bin
+          export PATH=$PATH:$PWD/KnightosSDK/bin
+          export PYTHONPATH=$PWD/KnightosSDK/lib/python3.10/site-packages:$PYTHONPATH
+          export SDK=$PWD/KnightosSDK
           cd kernel
           make TI73
           make kernel-headers
