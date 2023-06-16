@@ -41,9 +41,9 @@ jobs:
           export PATH=$PATH:$SDK/bin
           export PYTHONPATH=$SDK/lib/python3.10/site-packages/knightos-2.0.10-py3.10.egg:$PYTHONPATH
           
-          wget https://web.archive.org/web/20210120165629/https://packages.knightos.org/core/init/download
-          knightos install --local-path=init-1.0.0.pkg
-  
+          wget https://web.archive.org/web/20210120165629/https://packages.knightos.org/core/init/download \
+                -o init-1.0.0.pkg
+          knightos install --local-path=init-1.0.0.pkg init
       
       - name: Init submodules
         run: |
