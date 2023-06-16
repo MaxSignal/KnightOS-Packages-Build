@@ -36,6 +36,13 @@ jobs:
           
           unzip KnightOS-SDK.zip -d KnightosSDK
           chmod +x KnightosSDK/bin/*
+          
+          export SDK=$PWD/KnightosSDK
+          export PATH=$PATH:$SDK/bin
+          export PYTHONPATH=$SDK/lib/python3.10/site-packages/knightos-2.0.10-py3.10.egg:$PYTHONPATH
+          
+          wget https://web.archive.org/web/20210120165629/https://packages.knightos.org/core/init/download
+          knightos install --local-path=init-1.0.0.pkg
   
       
       - name: Init submodules
@@ -94,7 +101,6 @@ jobs:
           export SDK=$PWD/KnightosSDK
           export PATH=$PATH:$SDK/bin
           export PYTHONPATH=$SDK/lib/python3.10/site-packages/knightos-2.0.10-py3.10.egg:$PYTHONPATH
-          
           cd init
           
           knightos init
