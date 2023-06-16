@@ -30,6 +30,7 @@ jobs:
           sudo apt update && sudo apt upgrade
           
           sudo apt install make gcc python3 unzip wget
+          sudo pip3 install requests pystache pyyaml docopt
           
           wget https://github.com/MaxSignal/KnightOS-SDK-Build/releases/download/alpha3/KnightOS-SDK.zip
           
@@ -37,8 +38,9 @@ jobs:
           chmod +x KnightosSDK/bin/*
   
       
-      - name: Init submodules and make build folder
+      - name: Init submodules
         run: |
+          
           git submodule update --init --recursive
           
       #Core
@@ -91,7 +93,7 @@ jobs:
         run: |
           export SDK=$PWD/KnightosSDK
           export PATH=$PATH:$SDK/bin
-          export PYTHONPATH=$SDK/lib/python3.10/site-packages:$PYTHONPATH
+          export PYTHONPATH=$SDK/lib/python3.10/site-packages/knightos-2.0.10-py3.10.egg:$PYTHONPATH
           
           cd configlib
           knightos init
