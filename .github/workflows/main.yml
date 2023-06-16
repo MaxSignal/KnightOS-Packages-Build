@@ -41,15 +41,51 @@ jobs:
         run: |
           git submodule update --init --recursive
           
+      #Core
+          
       - name: kernel-header
         run: |
           export PATH=$PATH:$PWD/KnightosSDK/bin
           export PYTHONPATH=$PWD/KnightosSDK/lib/python3.10/site-packages:$PYTHONPATH
           export SDK=$PWD/KnightosSDK
+          
+          mkdir -p build/core/kernel-headers/ti73
+          mkdir -p build/core/kernel-headers/ti83p
+          mkdir -p build/core/kernel-headers/ti83pSE
+          mkdir -p build/core/kernel-headers/ti84p
+          mkdir -p build/core/kernel-headers/ti84pSE
+          mkdir -p build/core/kernel-headers/ti84pCSE
           cd kernel
+          
           make TI73
           make kernel-headers
-          mv kernel-headers-* ../build
+          mv kernel-headers-* ../build/core/kernel-headers/ti73
+          make clean
+          
+          make TI83p
+          make kernel-headers
+          mv kernel-headers-* ../build/core/kernel-headers/ti83p
+          make clean
+            
+          make TI83pSE
+          make kernel-headers
+          mv kernel-headers-* ../build/core/kernel-headers/ti83pSE
+          make clean
+          
+          make TI84p
+          make kernel-headers
+          mv kernel-headers-* ../build/core/kernel-headers/ti84p
+          make clean
+          
+          make TI84pSE
+          make kernel-headers
+          mv kernel-headers-* ../build/core/kernel-headers/ti84pSE
+          make clean
+          
+          make TI84pCSE
+          make kernel-headers
+          mv kernel-headers-* ../build/core/kernel-headers/ti84pCSE
+          make clean
       
       - uses: actions/upload-artifact@v3
         with:
